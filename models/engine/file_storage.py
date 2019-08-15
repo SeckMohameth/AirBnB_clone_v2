@@ -66,3 +66,8 @@ class FileStorage:
         """
         if obj is None:
             return
+
+        key = str(obj.__class__.__name__) + '.' + str(obj.id)
+
+        if key in self.__objects:
+            del self.objects[index]

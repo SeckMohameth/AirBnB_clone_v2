@@ -20,9 +20,10 @@ def hbnb():
 
 
 @ap.route('/c/<text>')
-def text:
+def ctext(text):
     ''' C '''
-    return 'C {}'.format(text.replace('_' ' '))
+    return 'C {}'.format(text.replace('_', ' '))
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)

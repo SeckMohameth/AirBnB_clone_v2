@@ -7,19 +7,19 @@ app = Flask(__name__)
 app.url_map.strict_slashes = False
 
 
-@app.route('/')
+@app.route('/', strict_slashes=False)
 def holberton():
     '''hello holberton'''
     return 'Hello HBNB!'
 
 
-@app.route('/hbnb')
+@app.route('/hbnb', strict_slashes=False)
 def hbnb():
     '''Display HBNB'''
     return 'HBNB'
 
 
-@ap.route('/c/<text>')
+@app.route('/c/<text>')
 def ctext(text):
     ''' C '''
     return 'C {}'.format(text.replace('_', ' '))

@@ -39,9 +39,9 @@ def number(n):
 
 
 @app.route('/number_template/<int:n>')
-def template(num):
+def template(n):
     '''number template'''
-    return render_template('5-number.html', num=num)
+    return render_template('5-number.html', n=n)
 
 
 
